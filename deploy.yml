@@ -1,0 +1,13 @@
+name: application deployment 
+on:
+push:
+branches:
+- main
+jobs:
+deploy:
+runs -on: ubuntu-latest
+steps:
+-name: checkout code
+uses: action/checkout@v4
+-name: deploy application
+run: echo"application deployed successfully"
